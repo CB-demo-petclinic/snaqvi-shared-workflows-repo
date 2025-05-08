@@ -1,0 +1,14 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: use-dummy-echo
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo-job:
+    uses: your-org/shared-workflows/.cloudbees/workflows/dummy-echo.yaml@main
+    with:
+      message: "Hello from the main app!"
+      username: "workflow-user"
