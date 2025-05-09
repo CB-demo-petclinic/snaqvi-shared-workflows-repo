@@ -5,10 +5,10 @@ on:
   push:
     branches:
       - main
-
 jobs:
   echo-job:
-    uses: ./.cloudbees/workflows/dummy-echo.yaml
-    with:
-      message: "Hello from the main app!"
-      username: "workflow-user"
+    steps:
+      - name: Completed
+        run: echo "done"
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
