@@ -8,7 +8,7 @@ on:
 
 jobs:
   echo-job:
-    uses: ./.cloudbees/workflows/dummy-echo.yaml@main
+    uses: CB-demo-petclinic/snaqvi-shared-workflows-repo/.cloudbees/workflows/dummy-echo.yaml@main
     with:
       message: "Hello from the main app!"
       username: "workflow-user"
